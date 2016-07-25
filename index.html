@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="gemstore">
+<head>
+<title>Store Module</title>
+<style>
+div {
+	border: 1px solid #ccc;
+	width: 400px;	
+}
+</style>
+
+</head>
+<body>
+<h1>Creating a Store Module with Angular JS</h1>
+<p>We will craete controllers here, Controllers are where we define our app's behaviour by defining functions and values.</p>
+<p>So now we will create our first controller</p>
+<div ng-controller="StoreController as store">
+	<h2>{{store.product.name}}</h2>
+	<p>$ {{store.product.price}}</p>
+    <p>{{store.product.description}}</p>
+    <button ng-show="store.product.canPurchase">Add to Cart </button>
+</div>
+
+
+
+
+<script src="angular.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
